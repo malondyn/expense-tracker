@@ -1,0 +1,141 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark base */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Expense Form */
+.expense-form {
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparency */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    gap: 10px;
+    backdrop-filter: blur(8px);
+    padding-right: 30px;
+    margin-top: 200px
+}
+
+.expense-form input, .expense-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.expense-form input {
+    flex: 1;
+    background: #333;
+    color: #fff;
+}
+
+.expense-form button {
+    background: gold; /* Luxury touch */
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-left: 20px;
+
+}
+
+.expense-form button:hover {
+    background: #e6c200;
+}
+
+/* Expense List */
+.expense-list {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.expense-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.expense-list li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Summary Section */
+.summary {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 60%;
+    font-weight: bold;
+    margin-bottom: 220px;
+}
+
+
+
+/* total amount */
+.total {
+    display: flex;
+    justify-content: center;
+}
+
+/* transition */
+
+/* Smooth fade-in for expense list */
+.expense-list li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Button hover effect */
+.expense-form button {
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.expense-form button:hover {
+    transform: scale(1.05);
+}
+
+/* Delete button animation */
+.delete-btn {
+    transition: opacity 0.3s ease;
+}
+
+.delete-btn:hover {
+    opacity: 0.7;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
