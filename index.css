@@ -139,3 +139,39 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Tablet-friendly adjustments */
+@media (max-width: 768px) {
+    .expense-form, .expense-list, .summary {
+        width: 90%;
+    }
+
+    .expense-form input {
+        font-size: 1rem;
+    }
+
+    .summary h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+    .expense-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .expense-form input, .expense-form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .expense-list ul {
+        padding: 0;
+    }
+
+    .summary h2 {
+        font-size: 1.2rem;
+    }
+}
